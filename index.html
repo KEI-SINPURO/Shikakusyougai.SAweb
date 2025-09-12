@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>視覚障がいを持つ方々が住みやすい生活環境を</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- スキップリンク -->
+    <a href="#main-content" class="sr-only">メインコンテンツへスキップ</a>
+
+    <!-- ヘッダーナビゲーション -->
+    <header class="header">
+        <nav class="nav" role="navigation" aria-label="メインナビゲーション">
+            <a href="#about" aria-label="私達についてのセクションへ移動">私達について</a>
+            <a href="#achievements" aria-label="実績取り組みのセクションへ移動">実績・取り組み</a>
+            <a href="#yearly" aria-label="一年間の活動図のセクションへ移動">一年間の活動図</a>
+            <a href="#activities" aria-label="活動内容のセクションへ移動">活動内容</a>
+            <a href="#mail" aria-label="お問い合わせのセクションへ移動">お問い合わせ</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- タイトルセクション -->
+        <section class="title-section fade-in">
+            <div class="container">
+                <h1>視覚障がいを持つ方々が<br />住みやすい生活環境を</h1>
+            </div>
+        </section>
+
+        <!-- 画像スライダー部分 -->
+        <section class="fade-in" aria-label="活動風景のスライドショー">
+            <div class="container">
+                <div class="hero-slider">
+                    <div class="slide active">
+                        <img src="z.index.pt/daimei1.png" alt="集合写真" />
+                    </div>
+                    <div class="slide">
+                        <img src="z.index.pt/daimei2.jpg" alt="作業風景" />
+                    </div>
+                    <div class="slide">
+                        <img src="z.index.pt/daimei3.jpg" alt="SUITO DAY" />
+                    </div>
+                    <button class="slider-btn prev-btn" onclick="changeSlide(-1)" aria-label="前の画像">‹</button>
+                    <button class="slider-btn next-btn" onclick="changeSlide(1)" aria-label="次の画像">›</button>
+                    
+                    <!-- スライドインジケーター -->
+                    <div class="slider-indicators">
+                        <button class="indicator active" onclick="goToSlide(0)" aria-label="1枚目の画像"></button>
+                        <button class="indicator" onclick="goToSlide(1)" aria-label="2枚目の画像"></button>
+                        <button class="indicator" onclick="goToSlide(2)" aria-label="3枚目の画像"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 私達について -->
+        <section id="about" class="section fade-in">
+            <div class="container">
+                <h2>私達について</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>視覚障がいを持つ方々が住みやすい生活環境を作るために活動をしているグループです。
+                            私達はその問題の解決に向けて意見を出し合います。
+                            自分の力が発揮できるように役割分担をし、コンテストや大企業へのプレゼンなどに挑戦しています。
+                            これからも私達は、毎日当事者の気持ちを考えて活動をしていきます。</p>
+                    </div>
+                    <div class="about-images">
+                        <div class="about-image active">
+                            <img src="z.index.pt/setumei1.jpg" alt="作業風景１" />
+                        </div>
+                        <div class="about-image">
+                            <img src="z.index.pt/setumei2.jpg" alt="作業風景２" />
+                        </div>
+                        <div class="about-image">
+                            <img src="z.index.pt/setumei3.png" alt="オフショット" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 実績取り組み -->
+        <section id="achievements" class="section fade-in">
+            <div class="container">
+                <h2>実績・取り組み</h2>
+                <div class="achievements-content">
+                    <div>
+                        <ul class="achievements-list">
+                            <li>大阪メトロにプレゼン</li>
+                            <li>みらい甲子園2023ファイナリスト受賞</li>
+                            <li>HITACHIにプレゼン</li>
+                            <li>靴下会社にプレゼン</li>
+                        </ul>
+                        <ul class="achievements-list2">
+                            <li>大阪府立大阪南視覚支援学校にインタビュー（過去5回）</li>
+                            <li>長居スポーツセンターにインタビュー</li>
+                            <li>靴下＆おもちゃ制作</li>
+                            <li>SUITO DAYへの参加（過去2回）</li>
+                            <li>アカデミックフェアへの参加（過去2回）</li>
+                        </ul>
+                    </div>
+                    <div class="achievements-image">
+                        <img src="z.index.pt/zisseki1.png" alt="大阪メトロにプレゼン" />
+                        <img src="z.index.pt/zisseki4.png" alt="みらい甲子園2023ファイナリスト受賞" />
+                        <img src="z.index.pt/zisseki3.jpg" alt="靴下会社にプレゼン" />
+                        <img src="z.index.pt/zisseki2.png" alt="大阪府立大阪南視覚支援学校にインタビュー" />
+                    </div>
+                </div>
+    <div class="container">
+        <div class="info-section">
+            <div class="info-content">
+                <div class="info-text">
+                    <h3>SUITO DAY・アカデミックフェアとは</h3>
+                    <p>これらは大阪府立水都国際中学校・高等学校で行われるイベントです。
+                        SUITO DAYは小学生向けのイベントであり、文化祭のように楽しんで私達の活動を知ることができます。
+                        一方、アカデミックフェアは私達の活動を学生から大人の方に伝えるのがメインであり、ポスターセッションやワークショップを行います。</p>
+                    
+                    <p>詳しくは右の画像をクリックし、本校の公式ホームページをご覧ください。</p>
+                </div>
+                <div class="info-image">
+                    <a href="https://osaka-city-ib.jp" target="_blank" rel="noopener noreferrer">
+                        <img src="z.index.pt/suito.jpeg" alt="水都国際ホームページ" />
+                        <div class="link-overlay">
+                            <span class="link-text">ホームページへ →</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+        </section>
+
+        <!-- １年間の活動図 -->
+        <section id="yearly" class="section fade-in">
+            <div class="container">
+                <h2>１年間の活動図</h2>
+                <p>※上手く動作しない場合はリロードをお願いします<p>
+                <div class="yearly-activity">
+                    <div class="activity-image">
+                        <div class="activity-slide active">
+                            <img src="z.index.pt/1.png" alt="年間活動" />
+                        </div>
+                        <div class="activity-slide">
+                            <img src="z.index.pt/3.png" alt="４月の活動" />
+                        </div>
+                        <div class="activity-slide">
+                            <img src="z.index.pt/4.png" alt="５月の活動" />
+                        </div>
+                        <div class="activity-slide">
+                            <img src="z.index.pt/5.png" alt="６月の活動" />
+                        </div>
+                        <div class="activity-slide">
+                            <img src="z.index.pt/6.png" alt="７月の活動" />
+                        </div>
+                        <div class="activity-slide">
+                            <img src="z.index.pt/7.png" alt="８月の活動" />
+                        </div>
+                        <div class="activity-slide">
+                            <img src="z.index.pt/8.png" alt="９月の活動" />
+                        </div>
+                        <div class="activity-slide">
+                            <img src="z.index.pt/9.png" alt="１０月の活動" />
+                        </div>
+                        <div class="activity-slide">
+                            <img src="z.index.pt/10.png" alt="１１月の活動" />
+                        </div>
+                        <div class="activity-slide">
+                            <img src="z.index.pt/11.png" alt="１２月の活動" />
+                        </div>
+                        <div class="activity-slide">
+                            <img src="z.index.pt/12.png" alt="１月の活動" />
+                        </div>
+                        <div class="activity-slide">
+                            <img src="z.index.pt/13.png" alt="２月の活動" />
+                        </div>
+                        <div class="activity-slide">
+                            <img src="z.index.pt/14.png" alt="３月の活動" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 活動内容 -->
+        <section id="activities" class="section fade-in">
+            <div class="container">
+                <h2>活動内容</h2>
+                <div class="activities-container">
+                    <div class="activity-card current-activity">
+                        <h3>現在の活動</h3>
+                        <p>現在では衣類の課題を解決するチームと、おもちゃの制作をするチームの２チームに分かれて活動しています。</p>
+                        <h4>衣類チーム</h4>
+                        <p>現在、どのような衣類かを知るためのQRコードを製作し、その案をユニクロにプレゼンしに行く活動をしています！</p>
+                        <a href="clothing/clothing.html" class="activity-btn">詳細を見る→</a>
+                        <p></p>
+                        <h4>おもちゃチーム</h4>
+                        <p>現在、1つで4種類のゲームができるおもちゃを2つ開発しています！</p>
+                        <a href="toy/toy.html" class="activity-btn">詳細を見る→</a>
+                    </div>
+                    <div class="activity-card past-activity">
+                        <h3>過去の活動</h3>
+                        <h4>エスカレーターの音声ガイド</h4>
+                        <p>私達が登下校の際に利用するOsaka Metroに、プレゼンテーションしました！</p>
+                        <h4>靴下の製作</h4>
+                        <p>視覚障がいを持つ方々だけでなく、誰でも使いやすい「靴下」の制作をしました！</p>
+                        <h4>おもちゃの製作</h4>
+                        <p>視覚障がいを持つ方々だけでなく、子供も「音」「大きさ」「触感」で楽しめる神経衰弱を作りました！</p>
+                        <a href="actived/actived.html" class="activity-btn">詳細を見る→</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせセクション -->
+        <section id="mail" class="section fade-in">
+            <div class="container">
+                <h2>お問い合わせ</h2>
+                <div class="contact-content">
+                    <div class="contact-form-container">
+                        <h3>お問い合わせフォーム</h3>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">お名前 <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required />
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">メールアドレス <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required />
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">電話番号</label>
+                                <input type="tel" id="phone" name="phone" />
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">件名 <span class="required">*</span></label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">選択してください</option>
+                                    <option value="support">問題解決の依頼</option>
+                                    <option value="collaboration">企業・団体との連携</option>
+                                    <option value="donation">寄付について</option>
+                                    <option value="volunteer">ご質問</option>
+                                    <option value="other">その他</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="6" required placeholder="お問い合わせの詳細をご記入ください..."></textarea>
+                            </div>
+                            
+                            <div class="form-submit">
+                                <button type="submit" class="submit-btn">
+                                    <span class="btn-text">送信する</span>
+                                    <span class="btn-icon">→</span>
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <div id="form-message" class="form-message" style="display: none;"></div>
+                    </div>
+                </div>
+                
+                <div class="contact-additional">
+                    <div class="faq-section">
+                        <h3>よくあるご質問</h3>
+                        <div class="faq-item">
+                            <button class="faq-question">インタビューをしたいのですが、可能ですか？</button>
+                            <div class="faq-answer">
+                                <p>まずはメールで詳しくご記入ください。その後、どのように対応するかはメールでお返しします。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">活動している姿の取材をしたいのですが、可能ですか？</button>
+                            <div class="faq-answer">
+                                <p>原則、校内活動の取材はできません。
+                                    しかし、SUITO DAYやアカデミックフェアなどの際には可能になる場合があります。
+                                    詳しくは当校にお問い合わせください。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">ただの質問でもお問い合わせしても宜しいですか？</button>
+                            <div class="faq-answer">
+                                <p>はい、なんでもご質問ください。できる限り、質問には対応させて頂きます。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
