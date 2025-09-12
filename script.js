@@ -300,7 +300,7 @@ function submitToFormspree() {
         if (response.ok) {
             // 成功メッセージを表示
             messageDiv.className = 'form-message success';
-            messageDiv.textContent = 'お問い合わせを受け付けました。ありがとうございます。3営業日以内にご返信いたします。';
+            messageDiv.textContent = 'お問い合わせを受け付けました。ありがとうございます！';
             messageDiv.style.display = 'block';
             
             // フォームをリセット
