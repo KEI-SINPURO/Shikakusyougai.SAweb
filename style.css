@@ -371,6 +371,24 @@ body {
     transform: scale(1.02); /* ホバー時に少し拡大 */
 }
 
+.ivent-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: rgba(0, 140, 255, 0.2);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(0, 140, 255, 0.2);
+}
+
+.ivent-btn:hover, .ivent-btn:focus {
+    background: rgba(0, 140, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 140, 255, 0.2);
+}
+
 /* 実績取り組みセクション */
 .achievements-content {
     display: grid;
