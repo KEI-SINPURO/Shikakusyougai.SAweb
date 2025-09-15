@@ -1127,3 +1127,11 @@ body {
         scroll-behavior: auto;
     }
 }
+.version {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 0.8rem;
+    z-index: 1000;
+}
