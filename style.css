@@ -1191,6 +1191,7 @@ body {
         scroll-behavior: auto;
     }
 }
+
 .version {
     position: fixed;
     bottom: 10px;
