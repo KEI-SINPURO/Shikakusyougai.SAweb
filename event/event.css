@@ -90,7 +90,8 @@ body {
 }
 
 /* セクションごとの背景色 */
-#ivent {
+
+#action {
     background: linear-gradient(135deg, #fdf4e8 0%, #f5e8d1 100%);
 }
 
@@ -113,7 +114,7 @@ body {
     height: 5px;
 }
 
-#ivent .activity-item::before {
+#action .activity-item::before {
     background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
 }
 
@@ -131,7 +132,7 @@ body {
     font-weight: 700;
 }
 
-#ivent .activity-text h2 {
+#action .activity-text h2 {
     color: #ff8c00;
 }
 
@@ -177,11 +178,11 @@ body {
     cursor: pointer;
 }
 
-#ivent .activity-btn {
+#action .activity-btn {
     background: linear-gradient(135deg, #ff8c00 0%, #e67e00 100%);
 }
 
-#ivent .activity-btn:hover {
+#action .activity-btn:hover {
     background: linear-gradient(135deg, #e67e00 0%, #ff8c00 100%);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);

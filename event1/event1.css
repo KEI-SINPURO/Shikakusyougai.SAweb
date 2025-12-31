@@ -1,0 +1,739 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+}
+
+/* 戻るボタン */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 102, 204, 0.95);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.back-button:hover {
+    background: #0066cc;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.back-icon {
+    font-size: 1.2rem;
+}
+
+/* タイトルセクション */
+.title-section {
+    padding: 10px 2rem 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #00c8ff 0%, #00be00 100%);
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.title-section .container {
+    width: 100%;
+}
+
+.title-section h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.event-info {
+    margin-top: 2rem;
+}
+
+.event-info p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    opacity: 0.9;
+}
+
+.date {
+    font-weight: 700;
+}
+
+/* セクション共通 */
+.section {
+    padding: 80px 2rem;
+    background: white;
+    margin: 2rem 4rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 2.8rem;
+    color: #000000;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+/* イベント概要 */
+.overview-content {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e8f5e8 100%);
+    padding: 3rem;
+    border-radius: 20px;
+}
+
+.overview-text p {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 1.5rem;
+}
+
+.overview-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0066cc;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* 改善版タイムライン */
+.timeline-section {
+    background: linear-gradient(135deg, #c0feff 0%, #c0ffc0 100%);
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.timeline-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-header {
+    background: linear-gradient(135deg, #0066cc 0%, #00be00 100%);
+    color: white;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.timeline-month {
+    font-size: 2.5rem;
+    font-weight: 800;
+    min-width: 120px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.timeline-header h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.timeline-body {
+    padding: 2rem;
+}
+
+.timeline-body h4 {
+    font-size: 1.3rem;
+    color: #0066cc;
+    margin: 1.5rem 0 1rem 0;
+    font-weight: 700;
+}
+
+.timeline-body h4:first-child {
+    margin-top: 0;
+}
+
+.timeline-body p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.timeline-body ul {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.timeline-body li {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.timeline-images {
+    margin-top: 1.5rem;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.timeline-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.timeline-images.multi {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.timeline-images.multi img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.timeline-images.multi2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.timeline-images.multi2 img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* 単一画像を右寄せ */
+.timeline-images.multi2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.timeline-images.multi2 img {
+    width: 50%;
+    max-width: 400px;
+}
+
+/* 広報活動 */
+.promotion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.promotion-card {
+    background: linear-gradient(135deg, #f8f9ff 0%, #f0f8f0 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 5px solid #0066cc;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.promotion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.promotion-card h3 {
+    font-size: 1.5rem;
+    color: #0066cc;
+    margin-bottom: 1rem;
+}
+
+.promotion-card p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.station-list {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.station-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.station-list li::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    color: #0066cc;
+}
+
+.station-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.station-images img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.facility-item {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+}
+
+.facility-item h4 {
+    color: #0066cc;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* ワークショップ */
+.workshops-section {
+    background: linear-gradient(135deg, #fff8e1 0%, #e8f5e8 100%);
+}
+
+.workshop-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.workshop-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.workshop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.workshop-number {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    font-weight: 800;
+    color: rgba(0, 102, 204, 0.1);
+}
+
+.workshop-card h3 {
+    font-size: 1.8rem;
+    color: #0066cc;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.workshop-card p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.workshop-image {
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.workshop-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* メッセージセクション */
+.message-section {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e8f5ff 100%);
+}
+
+.message-content {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.message-content p {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 1.5rem;
+}
+
+.future-vision {
+    background: linear-gradient(135deg, #e8f5e8 0%, #f0f8ff 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+}
+
+.future-vision h3 {
+    font-size: 1.8rem;
+    color: #0066cc;
+    margin-bottom: 1rem;
+}
+
+.future-vision p {
+    font-size: 1.1rem;
+}
+
+.thanks-message {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffe8e8 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.thanks-message p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* 最後の画像セクション */
+.final-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.final-images img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 1024px) {
+    .timeline-images.multi {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-images.multi img {
+        height: 250px;
+    }
+    
+    .workshop-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .final-images {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        margin: 1rem;
+        padding: 40px 1.5rem;
+    }
+    
+    .title-section {
+        padding: 100px 1.5rem 60px;
+        min-height: 50vh;
+    }
+    
+    .title-section h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .event-info p {
+        font-size: 1rem;
+    }
+    
+    .section h2 {
+        font-size: 2rem;
+    }
+    
+    .section-intro {
+        font-size: 1rem;
+    }
+    
+    .overview-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .timeline-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .timeline-month {
+        font-size: 2rem;
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .timeline-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .promotion-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .station-images {
+        grid-template-columns: 1fr;
+    }
+    
+    .station-images img {
+        height: 180px;
+    }
+    
+    .workshop-card {
+        padding: 2rem;
+    }
+    
+    .workshop-number {
+        font-size: 2rem;
+    }
+    
+    .workshop-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .message-content {
+        padding: 2rem;
+    }
+    
+    .message-content p {
+        font-size: 1rem;
+    }
+    
+    .future-vision h3 {
+        font-size: 1.5rem;
+    }
+    
+    .thanks-message p {
+        font-size: 1.1rem;
+    }
+    
+    .back-button {
+        top: 15px;
+        left: 15px;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .final-images img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-section h1 {
+        font-size: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .back-button {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+    
+    .hero-image {
+        padding: 1rem;
+    }
+    
+    .timeline-month {
+        font-size: 1.5rem;
+        padding: 0.8rem;
+    }
+    
+    .timeline-body {
+        padding: 1.5rem;
+    }
+}
+
+/* フォーカス状態の改善 */
+*:focus {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
+}
+
+/* キーボードナビゲーション時のスタイル */
+.keyboard-navigation *:focus {
+    outline: 3px solid #0066cc !important;
+    outline-offset: 2px !important;
+}
+
+/* 動きを減らす設定への対応 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* 画像プレースホルダー */
+.image-placeholder {
+    background: #f0f0f0;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* 印刷用スタイル */
+@media print {
+    .back-button {
+        display: none;
+    }
+    
+    .section {
+        margin: 1rem 0;
+        box-shadow: none;
+        page-break-inside: avoid;
+    }
+    
+    body {
+        background: white;
+    }
+}
+
+/* ボタンスタイル */
+.activity-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.activity-btn {
+    background: linear-gradient(0deg, #0073ffd5 0%, #0073ffb7 100%);
+}
+
+.activity-btn:hover {
+    background: linear-gradient(0deg, #0073ffb7 100%, #0073ffd5 0%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+}
+
+.activity-btn::after {
+    content: "→";
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.activity-btn:hover::after {
+    transform: translateX(3px);
+}
