@@ -55,7 +55,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 1rem 2rem;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -652,6 +652,24 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* 企業・団体のCSS */
+
+.kigyoudantai-image {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.kigyoudantai-image img {
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    transition: transform 0.3s ease; /* ホバー効果用 */
+}
+
 /* お問い合わせセクションのCSS */
 
 .contact-content {
@@ -702,8 +720,6 @@ body {
     font-size: 1.2rem;
     margin-right: 0.5rem;
 }
-
-/* お問い合わせセクション専用CSS（追加スタイル） */
 
 /* コンタクトコンテンツのレイアウト調整 */
 .contact-content {
